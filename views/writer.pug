@@ -1,0 +1,26 @@
+html
+  head
+    title Writer
+    style
+      include ../public/css/styles.css
+  body
+    h1 Writer
+    div#jsTester
+    include includes/loading.pug
+    main
+      div#left
+        h2 Content
+        div#previewArea(contentEditable="true" placeholder="type text here")
+      div#right
+        form#theForm(method="POST" action="/saveArticle")
+          label(for="title") Title: 
+          input#title(type="text" name="title" autocomplete="off")
+          <br>
+          label(for="author") Author: 
+          input#author(type="text" name="author" autocomplete="off")
+          textarea#bottom(name="content" style="display: none;") //- This is a security risk! Prone to SQL injection.
+          label(for="link") Link: 
+          input#link(type="text" name="link" autocomplete="off" placeholder="/article/link-to-this-article")
+          button#submitButton(type="button") Submit
+  script
+    include ../public/javascript/writer.js

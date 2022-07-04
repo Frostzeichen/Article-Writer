@@ -1,0 +1,45 @@
+main {
+  display: grid;
+  grid-template-columns: 50vw auto;
+}
+
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+#loadingAnimation {
+  position: fixed;
+}
+
+#loadingBackground {
+  background: green;
+  opacity: 0.3;
+  height: 100vh;
+  width: 100vw;
+}
+
+#previewArea {
+  padding: 3px;
+}
+
+[contenteditable] {
+  outline: 0px solid transparent;
+}
+
+[contenteditable=true]:empty:not(:focus):before {
+  content: attr(placeholder);
+  color: gray;
+  margin: 0;
+  font-family: Arial;
+}
+
+#previewArea:not(:focus) {
+  border: 1px solid gray;
+}
+
+[contenteditable=true]:focus {
+  border: 2px solid black;
+}
