@@ -3,7 +3,6 @@
 const faunadb = require("faunadb")
 const q = faunadb.query;
 const serverClient = new faunadb.Client({ secret: 'fnAEpWUSYOACU7N-i78QFG_sp94yh1ES6_P03RZQ' });
-// fnAEofWWaaACVJTEs0sSlcgu81glkeT3D-K2qDcj　六十四式
 
 //SERVER
 // Storage for list of titles.
